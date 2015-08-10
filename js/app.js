@@ -358,9 +358,9 @@ function AppViewModel() {
 			self.topPicks().forEach(function(venue) {
 				venue.marker.setAnimation(null);
 			});
-
-			venueMarker.setAnimation(google.maps.Animation.BOUNCE);
 		}
+
+		venueMarker.setAnimation(google.maps.Animation.BOUNCE);
 	}
 	
 

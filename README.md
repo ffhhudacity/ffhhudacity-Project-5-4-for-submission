@@ -1,3 +1,8 @@
+For 4th submission:
+
+	1. Fixed the code so that the marker on the map will be bounced when clicked.
+	2. Minor change of "Info" name to "Filter by Details".
+
 Improvements made for 3rd submission: Thanks for the reviewers' comments, I fixed the following:
 
 	1. Added the "info" option for filtering the searching function.
