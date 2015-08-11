@@ -75,14 +75,21 @@ function AppViewModel() {
 	var defaultExploreKeyword = 'Top picks';
 	var defaultNeighborhood = 'Stanford, CA';
 	
-	self.exploreKeyword = ko.observable(''); 
+
+	self.exploreKeyword = ko.observableArray(''); 
+	self.filter = ko.observable('');
+	self.filteredList = ko.computed(function(){
+		return ko.utils.arrayFilter(self.exploreKeyword(), function(keyword){
+			return defaultExploreKeyword.name.toLowerCase().indexOf(self.filter.toLowerCase()) >= 0;
+		});
+	});
 	self.neighborhood = ko.observable(defaultNeighborhood);	
 	self.formattedAddress = ko.observable('');	
 	self.topPicks = ko.observableArray('');	
-	self.currentlyForecast = ko.observable(''); 
+
 	self.selectedVenue = ko.observable(''); 
 	self.selectedMarker = ko.observable(''); 
-	self.displayForecastsList = ko.observable('false'); 
+
 	self.displayVenuesList = ko.observable('false'); 
 
 /////////// New York Times Search Articles
